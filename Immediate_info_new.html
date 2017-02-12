@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html>
+  <head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta content="telephone=no" name="format-detection">
+    <title>辅助信息</title>
+    <link rel="stylesheet" type="text/css" href="css/base.css" />
+    <link rel="stylesheet" type="text/css" href="css/step.css">
+  </head>
+  <body>
+    <div class="page1 page-current region-box">
+      <div class="content">
+        <form onsubmit="return false;">
+        <!--马上贷-->
+         <ul class="steps sp_d_header1"> 
+          <li class="step steping"><i class="step-icon">1</i><label>基本信息</label></li><li class="step steping"><i class="step-icon">2</i><label>辅助信息</label></li><li class="step"><i class="step-icon">3</i><label>攒信用</label></li> <li class="step"><i class="step-icon">4</i><label>人脸识别</label></li> <li class="step"><i class="step-icon">5</i><label>上传资料</label></li>     
+        </ul>
+        <!--邀约贷-->
+         <ul class="steps sp_d_header2">  
+          <li class="step steping"><i class="step-icon">1</i><label>基本信息</label></li><li class="step steping"><i class="step-icon">2</i><label>辅助信息</label></li><li class="step"><i class="step-icon">3</i><label>人脸识别</label></li><li class="step"><i class="step-icon">4</i><label>上传资料</label></li>    
+        </ul> 
+        <!--捷信邀约贷-->
+        <ul class="steps sp_d_header3">
+          <li class="step steping"><i class="step-icon">1</i><label>基本信息</label></li><li class="step steping"><i class="step-icon">2</i><label>辅助信息</label></li><li class="step"><i class="step-icon">3</i><label>人脸识别</label></li><li class="step"><i class="step-icon">4</i><label>授信</label></li><li class="step"><i class="step-icon">5</i><label>上传资料</label></li>
+        </ul>
+       <!--商品贷款-->
+         <ul class="steps sp_d_header4">  
+          <li class="step steping"><i class="step-icon">1</i><label>基本信息</label></li><li class="step steping"><i class="step-icon">2</i><label>辅助信息</label></li><li class="step"><i class="step-icon">3</i><label>上传资料</label></li>
+        </ul> 
+          <ul class="list-block label6">
+            <li class="item-content">
+              <div class="item-title color_b">身份信息</div>
+                <span class="delate_clear"></span>
+            </li>
+            <li class="item-content point bottom_line add_line">
+              <div class="item-title ">社会身份</div>
+              <div class="item-input">
+                <span class="select_title socialStatus">请选择社会身份</span>
+                <select name="socialStatus_loan" data-rule="required" data-rule-required="请选择社会身份" data-dictionary="socialStatus_loan" id="socialStatus_loan">
+                  <option value="">选择社会身份</option>
+                </select>
+              </div>
+            </li>
+            <li class="item-content point boss_work_list">
+              <div class="item-title">教育程度</div>
+              <div class="item-input">
+                <span class="select_title education">请选择受教育程度</span>
+                <select name="education" data-rule="required" data-rule-required="请选择受教育程度" data-dictionary="education" id="education">
+                  <option value="">请选择受教育程度</option>
+                </select>
+              </div>
+            </li>
+          </ul>
+          <ul class="list-block label6 personality">
+            <li class="item-content">
+              <div class="item-title color_b">收入信息</div>
+            </li>
+            <li class="item-content">
+              <div class="item-title">工作收入</div>
+              <div class="item-input">
+                <input class="shouru_q data_choose" type='tel' onkeyup="if(/[\D]/.test(this.value)){this.value=this.value.replace(/[\D]/g,'');}" value="" maxlength="6" placeholder="请填写每月税前工作收入" data-rule="required money" data-default-rule="required money" data-rule-msg="请填写正确的每月税前工作收入" />
+              </div>
+            </li>
+            <li class="item-content">
+              <div class="item-title">其他收入</div>
+              <div class="item-input">
+                <input class="shouru_t data_choose" type='tel' onkeyup="if(/[\D]/.test(this.value)){this.value=this.value.replace(/[\D]/g,'');}" value="" maxlength="6"  placeholder="请填写其他收入" data-rule="required money" data-default-rule="required money" data-rule-msg="请填写正确的每月其它收入" />
+              </div>
+            </li>
+            <li class="item-content">
+              <div class="item-title">其他贷款</div>
+              <div class="item-input">
+                <input class="shouru_k data_choose" type='tel' onkeyup="if(/[\D]/.test(this.value)){this.value=this.value.replace(/[\D]/g,'');}" value="" maxlength="7"  placeholder="请填写其他贷款每月应还金额" data-rule="required money1" data-default-rule="required money1" data-rule-msg="请填写正确的每月其它贷款应还金额" />
+              </div>
+            </li>
+          </ul>
+          <ul class='list-block label6 unemployed boss_work'>
+            <li class='item-content'>
+              <div class='item-title color_b'>单位信息</div>
+            </li>
+            <li class='item-content'>
+              <div class='item-title'>单位全称</div>
+              <div class='item-input'>
+                <input type='text' value='' placeholder='请填写单位全称' maxlength="40" data-rule='required name_work' data-default-rule="required name_work" class='work_a data_choose' data-rule-msg="请填写正确的单位全称" />
+              </div>
+            </li>  
+            <!-- <li class='item-content point boss_work_time'>-->
+            <li class='item-content boss_work_time'>
+              <div class='item-title'>首次工作日期</div>
+              <div class='item-input'>
+                <!--<input type="text" value="" readonly="readonly" data-rule="required" id="begin_time" class='kbtn data_choose begin_time' placeholder='请输入首次参加工作日期' data-rule-msg="首次参加工作日期">-->
+                <input type="text" value="" data-rule="required" id="begin_time" class='kbtn data_choose begin_time' placeholder='请输入首次参加工作日期' data-rule-msg="首次参加工作日期">
+              </div>
+            </li>        
+            <li class='item-content'>
+              <div class='item-title'>单位电话</div>
+              <div class='item-input'>
+                <input  type="tel" value placeholder='请输入座机号或手机号' maxlength="12" onkeyup="if(/[\D]/.test(this.value)){this.value=this.value.replace(/[\D]/g,'');}"  data-rule='required mobile_phone' class='pho_work' data-rule-msg="请填写正确的单位座机号或者手机号" >
+                <input  type="tel" value placeholder='分机号（选填）' maxlength="5" onkeyup="if(/[\D]/.test(this.value)){this.value=this.value.replace(/[\D]/g,'');}" data-rule='run_num' class="run_number" data-rule-msg="请填写正确的分机号" >
+              </div>
+            </li>
+          </ul>
+          <div class="unemployed boss_work wh_bg">
+            <div class="form-row  point">
+              <div class="form-label">单位地址</div>
+              <div class="form-controls">
+                <input class="select-assistor data_choose" type="text" placeholder="请选择省" value="" readonly="readonly" data-rule="required " data-rule-msg="请选择单位地址"/>
+                <select name="provinceCode" data-region="provinceCode" id="provinceCode"></select>
+                <input type="hidden" name="provinceName" data-region="provinceName" class="provinceCode" />
+              </div>
+            </div>
+            <div class="form-row  point">
+              <div class="form-label"></div>
+              <div class="form-controls">
+                <input class="select-assistor data_choose" type="text" placeholder="请选择市/区" value="" readonly="readonly" data-rule="required" data-rule-msg="请选择单位地址"/>
+                <select name="cityCode" data-region="cityCode" class="cityCode"></select>
+                <input type="hidden" name="cityName" data-region="cityName" id="cityCode" />
+              </div>
+            </div>
+            <div class="form-row  point">
+              <div class="form-label"></div>
+              <div class="form-controls">
+                <input class="select-assistor data_choose" type="text" placeholder="请选择县" value="" readonly="readonly" data-rule="required" data-rule-msg="请选择单位地址"/>
+                <select name="districtCode" data-region="zoneCode" class="zoneCode"></select>
+                <input type="hidden" name="districtName" data-region="zoneName" id="zoneCode" />
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-label">详细地址</div>
+              <div class="form-controls">
+                <input type="text" name="detail" class="text address data_choose" maxlength="60" placeholder="请输入详细单位地址" value="" data-rule="required address" data-default-rule="required address" data-rule-msg="单位地址:请输入以汉字开头的3-60位汉字+数字或字母或字符(仅支持-.()#)" />
+              </div>
+            </div>
+          </div>
+          <ul class='list-block label6 unemployed'>
+            <li class='item-content remove_job'>
+              <div class='item-title color_b'>职位信息</div>
+            </li>
+           <!-- <li class='item-content point begin_works'>-->
+            <li class='item-content begin_works'>
+              <div class='item-title'>最近入职日期</div>
+              <div class='item-input'>
+                <!--<input type='text' id="begin_rork" data-rule="required data_val" data-default-rule="required data_val" readonly="readonly" value="" placeholder='请输入最近一次入职日期' class='kbtn data_choose begin_rork' data-rule-msg="请选择最近一次入职日期">-->
+                <input type='text' id="begin_rork" data-rule="required data_val" data-default-rule="required data_val" value="" placeholder='请输入最近一次入职日期' class='kbtn data_choose begin_rork' data-rule-msg="请选择最近一次入职日期">
+              </div>
+            </li>
+            <li class="item-content point boss_work_list">
+              <div class="item-title">选择职位</div>
+              <div class="item-input">
+                <span class="select_title position_job">请选择职位信息</span>
+                <select name="position_job" data-rule="required" data-rule-required="请选择职位信息" data-dictionary="position_job" id="position_job">
+                  <option value="">请选择职位信息</option>
+                </select>
+              </div>
+            </li>
+          </ul>
+          <ul class="list-block label6">
+            <li class="item-content point">
+              <div class="item-title">婚姻状况</div>
+              <div class="item-input">
+                <span class="select_title familyMaritalStatus">请选择婚姻状况</span>
+                <select name="familyMaritalStatus" id="familyMaritalStatus" data-rule="required" data-rule-required="请选择婚姻状况" data-dictionary="familyMaritalStatus">
+                    <option value="">请选择婚姻状况</option>
+                </select>
+              </div>
+            </li>
+          </ul>
+          <ul class="list-block label6 contacts" id="list_0">
+            <li class="item-content">
+              <div class="item-title color_b">联系人</div>
+            </li>
+            <li class="item-content point">
+              <div class="item-title">关系</div>
+              <div class="item-input">
+                <span class="select_title allRelation">请选择与申请人关系</span>
+                <select name="familyRelation" id="allRelation"   data-rule-required="请选择与申请人关系" data-dictionary="familyRelation">
+                </select>
+              </div>
+            </li>
+            <li class="item-content">
+              <div class="item-title">姓名</div>
+              <div class="item-input">
+                <input type="text" value="" maxlength="20"  placeholder="请输入联系人姓名" data-rule-msg='姓名：请输入2到20个汉字' data-rule="required name_self" class="name_all" />
+              </div>
+            </li>
+            <li class="item-content phone_bt phone_click0">
+              <div class="item-title">手机号</div>
+              <div class="item-input">
+                <input type="tel" value="" maxlength="11" data-rule-msg='请填写正确的联系人手机号码' data-rule-required='请填写联系人手机号码' placeholder='请输入正确的联系人手机号' data-rule="required mobile" class="pho_mobile" />
+              </div>
+              <span></span>
+            </li>
+            <li class="item-content mar_0">
+              <div class="item-title">同现居地址</div>
+              <div class="item-input">
+                <label class="iosCheck">
+                  <input type="checkbox">
+                  <i>
+                  </i>
+                </label>
+              </div>
+            </li>
+            <li class="item-content address_add">
+              <div class="item-title">联系地址</div>
+              <div class="item-input">
+                <input type="text" value="" maxlength="60" data-rule-msg='联系地址:请输入以汉字开头的3-60位汉字+数字或字母或字符(仅支持-.()#)' placeholder="请输入3-60位汉字+数字或字母或字符" data-rule="required address" class="address_all" />
+              </div>
+            </li>            
+            <p class="next_cilck">+添加其他联系人</p>                    
+          </ul>
+          <div class="content-block">
+            <div class="button-box">
+              <button class="button button-big button-round" type="button" name="next">下一步</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+	<script type="text/javascript" src="config/config.js"></script>
+    <!-- 省市区静态数据 -->
+    <script type="text/javascript" src='js/zepto.min.js'></script>
+    <script type="text/javascript" src="js/city.data.js"></script>
+    <script type="text/javascript" src='js/common.js'></script>
+    <!--select 下拉菜单-->
+    <script type="text/javascript" src="js/dictionary.js"></script>
+	<!-- 区分捷信邀约贷新流程 -->
+	<script>window.NEW_PROCESS = true;</script>
+    <!--行为数据-->
+    <script type="text/javascript" src='js/Immediate_loan.js'></script>
+  </body>
+
+</html>
